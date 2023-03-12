@@ -4,74 +4,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Autoquest</title>
+    <link rel="stylesheet" href="../static/css/styles2.css">
+    <link rel="icon" href="../static/assets/favicon.png">
 </head>
 <body>
     <form method="POST">
-        <!--price-->
-        <label for="price">Price (20000-2000000): </label>
-        <input type="number" id="price" name="price" min="20000" max="2000000"><br>
+    <section id="q1" class="que1">
+        <div class="title">
+            What's the maximum price you would buy a car for?
+        </div>
+        <div class="subtitle">
+            To start, what's your budget like? What price range are you comfortable with? Knowing this will make it easier for us to find the right car that fits your needs and your wallet.
+        </div>
 
-        <!--type-->
-        <label for="truck">Truck: </label>
-        <input type="radio" id="truck" name="type" value="truck""><br>
-        <label for="suv">Suv: </label>
-        <input type="radio" id="suv" name="type" value="suv""><br>
-        <label for="sports">Sports car: </label>
-        <input type="radio" id="sports" name="type" value="sports"><br>
+        <div class="slider-container">
+            <p>$<span id="demo"></span></p>
+            <input type="range" min="20000" max="2000000" value="20000" class="slider" name = "price" id="price">
+        </div>
 
-        <!--engine-->
-        <label for="gas">Gas: </label>
-        <input type="radio" id="gas" name="engine" value="gas""><br>
-        <label for="electric">Electric: </label>
-        <input type="radio" id="electric" name="engine" value="electric""><br>
-        <label for="hybrid">Hybrid: </label>
-        <input type="radio" id="hybrid" name="engine" value="hybrid"><br>
+        <div class="next">
+            <div id = n1 class="button">
+                <a class="text" href="#q2">Next</a>
+            </div>
+        </div>
+    </section>
 
-        <!--seats-->
-        <label for="seats">Seats (2-8)</label>
-        <input type="number" id="seats" name="seats" min="2" max="8"><br>
+    <section id="q2" class="que2">
+        <div class="title">
+            What type of car would you like to drive?
+        </div>
+        <div class="subtitle">
+            Do you see yourself cruising through rugged terrain in a truck, enjoying the spaciousness and versatility of an SUV, or feeling the wind in your hair in a sleek sports car?
+        </div>
+        <div class="grid">
+            <button id="b1" class="button1">
+                <p>Truck</p>
+            </button>
+            <input type="radio" id="truck" name="type" value="truck""><br>
+            <button id="b2" class="button1">
+                <p>SUV</p>
+            </button>
+            <input type="radio" id="suv" name="type" value="suv""><br>
+            <button id="b3" class="button1">
+                <p>Sports Car</p>
+            </button>
+            <input type="radio" id="sports" name="type" value="sports"><br>
+        </div>
+        <div id="n2" class="button">
+            <a class="text" href="#q3">Next</a>
+        </div>
+    </section>
 
-        <!--uses-->
-        <label for="camping">Camping: </label>
-        <input type="checkbox" id="camping" name="uses" value="camping"><br>
-        <label for="towing">Towing: </label>
-        <input type="checkbox" id="towing" name="uses" value="towing"><br>
-        <label for="worktable">Worktable: </label>
-        <input type="checkbox" id="worktable" name="uses" value="worktable"><br>
-        <label for="offroad">Offroad: </label>
-        <input type="checkbox" id="offroad" name="uses" value="offroad"><br>
-        <label for="performance">Performance: </label>
-        <input type="checkbox" id="performance" name="uses" value="performance"><br>
-        <label for="track">Track: </label>
-        <input type="checkbox" id="track" name="uses" value="track"><br>
-        <label for="fashion">Fashion: </label>
-        <input type="checkbox" id="fashion" name="uses" value="fashion"><br>
-        <label for="speed">Speed: </label>
-        <input type="checkbox" id="speed" name="uses" value="speed"><br>
-        <label for="hypercar">Hypercar: </label>
-        <input type="checkbox" id="hypercar" name="uses" value="hypercar"><br>
-        <label for="everyday">Everyday: </label>
-        <input type="checkbox" id="everyday" name="uses" value="everyday"><br>
-        <label for="family">Family: </label>
-        <input type="checkbox" id="family" name="uses" value="family"><br>
-        <label for="safety">Safety: </label>
-        <input type="checkbox" id="safety" name="uses" value="safety"><br>
-        <label for="economic">Economic: </label>
-        <input type="checkbox" id="economic" name="uses" value="ecomomic"><br>
-        <label for="comfort">Comfort: </label>
-        <input type="checkbox" id="comfort" name="uses" value="comfort"><br>
+    <section id="q3" class="que3">
+        <div class="title">
+            Is an all-terrain vehicle important to you?
+        </div>
 
-        <!--allterrain-->
-        <label for="allterrain">All terrain?: </label>
-        <input type="checkbox" id="allterrain" name="allterrain" value="True"><br>
+        <div class="subtitle">
+            Are you someone who loves to explore off-road terrains and enjoy the great outdoors? If so, an all-terrain vehicle might just be the perfect addition to your adventure gear! 
+        </div>
+        <div class="grid">
+            <button id="b21" class="button1">
+                <p>Yes</p>
+            </button>
+            <input type="checkbox" id="allterrain" name="allterrain" value="True"><br>
+        </div> 
 
-        <!--additional comment-->
-        <label for="comment"></label>
-        <input type="text" id="comment" name="comment"><br>
+        <div id="n3" class="button">
+            <a class="text" href="#q4">Next</a>
+        </div>
+    </section>
 
-        <input type="submit" value="Submit">
+    <section id="q4" class="que4">
+        <div class="title">
+            How many seats would you like in your car?
+        </div>
+        <div class="subtitle">
+            Not sure how many seats you need? Consider your daily routine and how many passengers you typically carry to determine what size vehicle is right for you.
+        </div>
+
+        <div class="slider-container">
+            <p><span id="demo1"></span> Seats</p>
+            <input type="range" min="2" max="8" value="4" class="slider" id="seats" name="seats">
+        </div>
+
+        <div id ="n4" class="button">
+            <a class="text" href="#q5">Next</a>
+        </div>
+    </section>
+
+    <section id="q5" class="que5">
+        <div class="title">
+            What do you want your car to be powered by?
+        </div>
+
+        <div class="subtitle">
+            Do you want an electric car that's environmentally friendly, or a gasoline-powered car that's tried and true? Maybe a hybrid — a blend of both — is more your speed.
+        </div>
+        <div class="grid">
+            <button id="b51" class="button1">
+                <p>Gas</p>
+            </button>
+            <input type="radio" id="gas" name="engine" value="gas""><br>
+            <button id="b52" class="button1">
+                <p>Hybrid</p>
+            </button>
+            <input type="radio" id="electric" name="engine" value="electric""><br>
+            <button id="b53" class="button1">
+                <p>Electric</p>
+            </button>
+            <input type="radio" id="hybrid" name="engine" value="hybrid"><br>
+        </div>
+
+        <div id="n5" class ="button">
+            <a class="text" href="#q6">Next</a>
+        </div>
+        
+    </section>
+
+    <section id="q6" class="que6">
+        <div class="title">
+            What would you use your dream car for?
+        </div>
+        <div class="checkbox">
+            <label for="camping">Camping: </label>
+            <input type="checkbox" id="camping" name="uses" value="camping"><br>
+            <label for="towing">Towing: </label>
+            <input type="checkbox" id="towing" name="uses" value="towing"><br>
+            <label for="worktable">Workstation: </label>
+            <input type="checkbox" id="worktable" name="uses" value="worktable"><br>
+            <label for="offroad">Offroad: </label>
+            <input type="checkbox" id="offroad" name="uses" value="offroad"><br>
+            <label for="performance">Performance: </label>
+            <input type="checkbox" id="performance" name="uses" value="performance"><br>
+            <label for="track">Track use: </label>
+            <input type="checkbox" id="track" name="uses" value="track"><br>
+            <label for="fashion">Stylish: </label>
+            <input type="checkbox" id="fashion" name="uses" value="fashion"><br>
+            <label for="speed">Speed: </label>
+            <input type="checkbox" id="speed" name="uses" value="speed"><br>
+            <label for="hypercar">Hypercar: </label>
+            <input type="checkbox" id="hypercar" name="uses" value="hypercar"><br>
+            <label for="everyday">Everyday: </label>
+            <input type="checkbox" id="everyday" name="uses" value="everyday"><br>
+            <label for="family">Family: </label>
+            <input type="checkbox" id="family" name="uses" value="family"><br>
+            <label for="safety">Safety: </label>
+            <input type="checkbox" id="safety" name="uses" value="safety"><br>
+            <label for="economic">Economic: </label>
+            <input type="checkbox" id="economic" name="uses" value="ecomomic"><br>
+            <label for="comfort">Comfort: </label>
+            <input type="checkbox" id="comfort" name="uses" value="comfort"><br>
+        </div>
+    </section>
+
+    <section id="q7" class="que7">
+    <div class="grid"> </div>
+        <div class="title">
+            Finally, personalize it! What would you like to add?
+        </div>
+
+        <div class="subtitle1">
+            There's no better feeling than making a car your own. That's why we're asking you now - what would you like to add to your dream car? You can list some specifics, or even tell us a story and we’ll recommend something for you! Whatever it is, we can make it happen. So go ahead, write anything you want! Your dream car is waiting...
+        </div>
+
+        
+        <textarea id="textsquare" name="comment" id ="comment" rows="18" cols="90">
+        </textarea>
+    </div>
+    <div id="n7" class="button">
+        <input type="submit">
+    </div>
+    </section>
     </form>
 </body>
+<script src="../static/js/script.js"></script>
 </html>

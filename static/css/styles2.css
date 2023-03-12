@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html,body{
+    margin:0;
+    padding:0; 
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.que1{
+    background-image: url(../assets/back1.png);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    margin: auto; 
+    background-repeat: no-repeat;
+}
+
+.que2{
+  background-image: url(../assets/back2.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: auto; 
+  background-repeat: no-repeat;
+}
+
+.que3{
+  background-image: url(../assets/back3.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.que4{
+  background-image: url(../assets/back4.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.que5{
+  background-image: url(../assets/back5.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.que6{
+  background-image: url(../assets/back6.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.que7{
+  background-image: url(../assets/back7.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.que1 p{  
+  text-align: right;
+  color: white;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  padding-top: 2%;
+  padding-right: 20%;
+  font-size: 150%;
+}
+
+.title {
+    /* What’s the maximum price you would buy a car for? */
+
+    width: 100%;
+    padding-top: 13%;
+
+    /* Title Text */
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 437.5%;
+    line-height: 10vh;
+    text-align: center;
+
+    /* AutoQuest Beige */
+
+    color: #F2E9D2;
+
+    /* Drop Shadow */
+
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+} 
+
+.subtitle {
+    /* To start, what's your budget like? What price range are you comfortable with? Knowing this will make it easier for us to find the right car that fits your needs and your wallet. */
+
+    padding-top: 2%;
+    width: 70%;
+    padding-left: 15%;
+
+
+    /* Subtitle Text */
+
+    font-family: 'Fahkwang';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 218.75%;
+    line-height: 46px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slider-container {
+    width: 100%; /* Width of the outside container */
+    height: 25%;
+    margin: 0 auto;
+  }
+  
+  /* The slider itself */
+  .slider {
+    appearance: none;
+    width: 60%; /* Full-width */
+    background: #12275A; /* Grey background */
+    outline: none; /* Remove outline */
+    bottom: 0;
+    left: 50%;
+    margin-left: 20%;
+  }
+  
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #F2E9D2;
+    cursor: pointer;
+    transform: rotate(45deg);
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: #F2E9D2;
+    cursor: pointer;
+  }
+
+
+.text{
+  display: inline-block;
+  transform: skew(30deg);
+  height: 0;
+  padding-left: 43%;
+  padding-top: 3%;
+  padding-bottom: 15%;
+  top: 1vh;
+  
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 187.5%;
+  line-height: 39px;
+  text-align: center;
+  /* AutoQuest Blue */
+  z-index: 1;
+  color: #12275A;
+  text-decoration: none;
+}
+
+.button{
+
+  /* AutoQuest Beige */
+  transform: skew(-30deg);
+  background: white;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  width: 25%;
+  margin-left: 35%;
+  
+
+}
+
+#n2 {
+  top: 10%;
+}
+
+.button1{
+
+  /* CTA Button */
+
+
+  width: 366px;
+  height: 73px;
+  left: 170px;
+  top: 569px;
+  transform: skew(-30deg);
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  background-color: #F2E9D2;
+  margin-top: 4%;
+  border: none;
+  margin-left: 6.5%;
+
+}
+.button1 p{
+  display: inline-block;
+  transform: skew(30deg);
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 600;
+  color: #12275A;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 187.5%;
+  text-align: center;
+  margin-bottom: 70%;
+}
+
+#n3{
+  margin-top: 5%;
+}
+#b21{
+  margin-left:22%;
+}
+
+.diff{
+  color: #F2E9D2;
+}
+
+.que4 p{  
+  text-align: right;
+  color: white;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  padding-top: 2%;
+  padding-right: 20%;
+  font-size: 150%;
+}
+
+#n5{
+  margin-top: 5%;
+}
+
+.checkbox{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color:#F2E9D2;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.checkbox label{
+  display: inline-block;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 100%;
+  color:#12275A;
+ overflow: hidden;
+}
+
+.checkbox input{
+  overflow: hidden;
+}
+
+#textsquare{
+  display: inline-block;
+  margin-left: 0;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100%;
+  margin-left: 8%;
+  color:black;
+}
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.subtitle1{
+  display: inline-block;
+  font-family: 'Fahkwang';
+  font-style: normal;
+  font-weight: 300;
+  width: 25%;
+  font-size: 100%;
+  color:white;
+  margin-left: 10%;
+  font-size: 150%;
+  overflow: hidden;
+}
+
+#n7{
+  margin-top: 2%;
+}

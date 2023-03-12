@@ -27,4 +27,21 @@ def get_results(request: Request, type: str = Form(None), engine: str = Form(Non
     car = calculate_car(form)
     img = car["name"].lower().replace(' ', '_').replace('-', '_')
     msg = generate_msg(car, comment)
-    return templates.TemplateResponse("results.html", {"request": request, "car": car, "img": img, "msg": msg})
+    print(type, engine, str(price), str(seats), str(uses), str(allterrain), str(comment))
+    li = []
+    if car["price"] < price:
+        li.append("It's within your budget")
+    if car["type"] == type:
+        li.append(f"It is a {type}")
+    if car["engine"] == engine:
+        li.append(f"It has a {engine} engine")
+    if car["seats"] == seats:
+        li.append(f"It has {str(seats)} seats")
+    if car["allterrain"] and allterrain:
+        li.append(f"It can go all terrain")
+    uses_desired = [use for use in uses if use in car["uses"]]
+    if len(uses_desired) > 0: 
+        li.append("Perfect for: " + ", ".join(uses_desired))
+    print(str(li))
+
+    return templates.TemplateResponse("results.html", {"request": request, "car": car, "img": img, "li": li, "msg": msg})

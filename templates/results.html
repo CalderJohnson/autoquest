@@ -4,11 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Autoquest</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" href="../static/assets/favicon.png">
 </head>
 <body>
-    <img src="../static/assets/car_images/{{img}}.png" alt=""><br>
-    <p>{{car["name"]}}</p>
-    <p>{{msg}}</p>
+    <section class="nav">
+        <div>
+            <img src="../static/assets/logo.png">
+        </div>
+        <a href="https://devpost.com/software/autoquest">Devpost</a>
+        <div id = devpost></div>
+    </section>
+
+    <section class="car">
+        <div class="title2">
+            Your search is over! Get a... <br> Ford {{car["name"]}} <br>and start your adventure today!
+        </div>
+        <img src="../static/assets/car_images/{{img}}.png" alt="{{img}}" style="float: right; max-width: 50%; height: auto;"><br>
+        <div class="title2">Price: ${{car["price"]}}</p>
+    </section>
+
+    <section class="perks">
+        <div style="float: left; width: 50%;">
+            <div class="title2">We recommend this car because...</div>
+            <ul>
+            {% for string in li %}
+                <li class="info"> {{string}} </li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+        <div style="float: right; width: 50%;">
+            <div class="title2">Can you picture this?</div>
+            <p class="info">{{msg}}</p>
+        </div>
+    </section>
+
+    <section class="credits">
+        <div id="s" class="finale">
+            Made by Team Eyeliner at Hack Dearborn
+        </div>
+        <div id="f1">
+            What we used (thanks!)
+        </div>
+
+        <div id="f2">
+            Team Members
+        </div>
+        <img src="../static/assets/companies.png">
+        <div id="f3">
+            Design: Kelly Owenya<br>
+            Front-End: Yasseen Bakheet<br>
+            Back-End: Calder Johnson<br>
+        </div>
+    </section>
 </body>
 </html>
