@@ -1,6 +1,8 @@
+"""Code pertaining to determining their vehicle based on the form"""
 from pydantic import BaseModel
 from copy import deepcopy
 
+#hardcoded database of ford models
 data = [
     {
         "name": "F-150",
