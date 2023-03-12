@@ -159,8 +159,8 @@ class CarForm(BaseModel):
     engine: str | None = None
     price: int
     seats: int | None = None
-    uses: list | None = None
-    allterrain: bool | None = None
+    uses: list = []
+    allterrain: bool
 
 def calculate_car(form: CarForm):
     """Determine optimal car based on form data"""

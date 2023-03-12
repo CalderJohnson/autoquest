@@ -20,9 +20,10 @@ def get_form(request: Request):
     return templates.TemplateResponse("form.html", {"request": request})
 
 @app.post('/form/', response_class=HTMLResponse)
-def get_results(request: Request, type: str = Form(...), engine: str = Form(...), price: int = Form(...), seats: int = Form(...), uses: list = Form(...), allterrain: bool = Form(...)):
+def get_results(request: Request, type: str = Form(None), engine: str = Form(None), price: int = Form(2000000), seats: int = Form(None), uses: list = Form(...), allterrain: bool = Form(False)):
     """Results page"""
-    form = CarForm(type, engine, price, seats, uses, allterrain)
+    form = CarForm(type=type, engine=engine, price=price, seats=seats, uses=uses, allterrain=allterrain)
+    print(type, engine, str(price), str(seats), str(uses), str(allterrain))
     car = calculate_car(form)
     img = car["name"].lower().replace(' ', '_').replace('-', '_')
     return templates.TemplateResponse("results.html", {"request": request, "car": car, "img": img})

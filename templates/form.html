@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <form method="POST">
+        <!--price-->
+        <label for="price">Price (20000-2000000): </label>
+        <input type="number" id="price" name="price" min="20000" max="2000000"><br>
+
+        <!--type-->
+        <label for="truck">Truck: </label>
+        <input type="radio" id="truck" name="type" value="truck""><br>
+        <label for="suv">Suv: </label>
+        <input type="radio" id="suv" name="type" value="suv""><br>
+        <label for="sports">Sports car: </label>
+        <input type="radio" id="sports" name="type" value="sports"><br>
+
+        <!--engine-->
+        <label for="gas">Gas: </label>
+        <input type="radio" id="gas" name="engine" value="gas""><br>
+        <label for="electric">Electric: </label>
+        <input type="radio" id="electric" name="engine" value="electric""><br>
+        <label for="hybrid">Hybrid: </label>
+        <input type="radio" id="hybrid" name="engine" value="hybrid"><br>
+
+        <!--seats-->
+        <label for="seats">Seats (2-8)</label>
+        <input type="number" id="seats" name="seats" min="2" max="8"><br>
+
+        <!--uses-->
+        <label for="camping">Camping: </label>
+        <input type="checkbox" id="camping" name="uses" value="camping"><br>
+        <label for="towing">Towing: </label>
+        <input type="checkbox" id="towing" name="uses" value="towing"><br>
+        <label for="worktable">Worktable: </label>
+        <input type="checkbox" id="worktable" name="uses" value="worktable"><br>
+        <label for="offroad">Offroad: </label>
+        <input type="checkbox" id="offroad" name="uses" value="offroad"><br>
+        <label for="performance">Performance: </label>
+        <input type="checkbox" id="performance" name="uses" value="performance"><br>
+        <label for="track">Track: </label>
+        <input type="checkbox" id="track" name="uses" value="track"><br>
+        <label for="fashion">Fashion: </label>
+        <input type="checkbox" id="fashion" name="uses" value="fashion"><br>
+        <label for="speed">Speed: </label>
+        <input type="checkbox" id="speed" name="uses" value="speed"><br>
+        <label for="hypercar">Hypercar: </label>
+        <input type="checkbox" id="hypercar" name="uses" value="hypercar"><br>
+        <label for="everyday">Everyday: </label>
+        <input type="checkbox" id="everyday" name="uses" value="everyday"><br>
+        <label for="family">Family: </label>
+        <input type="checkbox" id="family" name="uses" value="family"><br>
+        <label for="safety">Safety: </label>
+        <input type="checkbox" id="safety" name="uses" value="safety"><br>
+        <label for="economic">Economic: </label>
+        <input type="checkbox" id="economic" name="uses" value="ecomomic"><br>
+        <label for="comfort">Comfort: </label>
+        <input type="checkbox" id="comfort" name="uses" value="comfort"><br>
+
+        <!--allterrain-->
+        <label for="allterrain">All terrain?: </label>
+        <input type="checkbox" id="allterrain" name="allterrain" value="True"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
